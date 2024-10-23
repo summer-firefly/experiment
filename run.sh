@@ -1,6 +1,6 @@
 #!/bin/bash
-if [ -z "$1" ]; then
-    echo "Usage: $0 experiment-filename"
+if [ -z "$1" ] || [[ $1 != src* ]]; then
+    echo "Usage: $0 src/experiment-filename"
     exit 1
 fi
 cppFile="$1"
