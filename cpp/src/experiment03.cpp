@@ -19,12 +19,12 @@ int main() {
             cv.wait(lock, [i] { return currentThread == i; });
             while (total > 0) {
                 currentThread = (currentThread + 1) % n;
-                std::cout << "thread " << i << " has print , total rest : " << total-- << std::endl;
+                std::cout << "线程" << i << "此次打印完成,剩余总次数:" << total-- << std::endl;
                 cv.notify_all();
                 goto WAIT_TAG;
             }
             currentThread = (currentThread + 1) % n;
-            std::cout << "thread " << i << " has exit  , total rest : " << total << std::endl;
+            std::cout << "线程" << i << "成功退出,剩余总次数" << total << std::endl;
             cv.notify_all();
         });
     }
