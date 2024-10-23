@@ -4,8 +4,8 @@
 
 ```bash
 cd ./cpp
-./run.sh experimentXXX.cpp
+./run.sh filename.cpp
 ```
 
-例如`./run.sh experiment01.cpp`
+例如`./run.sh Sort.cpp`
 
