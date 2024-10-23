@@ -15,9 +15,11 @@ public:
         this->height = height;
     }
     bool operator<(const Person &p) const {
+        cout << "call Person::operator<" << endl;
         return this->age < p.age;
     }
     bool operator>(const Person &p) const {
+        cout << "call Person::operator>" << endl;
         return this->height > p.height;
     }
 
@@ -43,6 +45,7 @@ void compareCustomTypes() {
 }
 int main() {
     compareBuildInTypes();
+    cout << endl;
     compareCustomTypes();
     return 0;
 }
