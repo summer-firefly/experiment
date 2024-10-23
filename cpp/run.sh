@@ -4,5 +4,5 @@ if [ -z "$1" ] || [[ $1 != src* ]]; then
     exit 1
 fi
 cppFile="$1"
-g++ $cppFile -o a.out -std=c++17 && ./a.out
+g++ $cppFile -o a.out -std=c++17 -lpthread && ./a.out
 rm a.out
